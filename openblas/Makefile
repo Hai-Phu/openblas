@@ -1,17 +1,12 @@
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
-#
-
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=OpenBLAS
 PKG_VERSION:=0.3.9
 PKG_RELEASE:=1
+PKG_BUILD_DIR:=$(BUILD_DIR)/OpenBLAS-$(PKG_VERSION)
 PKG_SOURCE:=v$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/xianyi/OpenBLAS/archive/
 PKG_HASH:=28cc19a6acbf636f5aab5f10b9a0dfe1
-PKG_BUILD_DIR:=$(BUILD_DIR)/OpenBLAS-$(PKG_VERSION)
-
 include $(INCLUDE_DIR)/package.mk
 
 define Package/openblas
